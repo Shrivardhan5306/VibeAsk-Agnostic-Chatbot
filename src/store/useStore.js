@@ -30,7 +30,7 @@ export const useAuthStore = create((set) => ({
     set({ loading: true });
     try {
       // Synchronize with Postgres backend
-      const res = await fetch('http://localhost:3001/api/auth/sync', {
+      const res = await fetch('/api/auth/sync', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
